@@ -20,6 +20,9 @@ while menu1=='Y':
     players+=((playername, points),)
     averagepoints+=points
     menu1=str(input('Do you want to register another player? (Y/N): ')).strip().upper()
+if len(players) == 0:
+    print("No players registered.")
+    exit()
 bottomplayerpoints = players[0][1]
 topplayerpoints=players[0][1]
 for name, points in players:
